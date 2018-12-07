@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="worldwidetravel.css">
+    <title>World Wide Travel</title>
+</head>
+<!-- Questionaire -->
+<body>
+    <!-- Header -->
+    <header>
+        <img src="Images/logo.png" alt="Logo for World Wide Travel. A simple vector image of the earth.">
+    </header>
+    <!-- Main Content -->
+    <main>
+        <div id="heroImg">  <!-- Used to display a fixed background image for the scrolling effect -->
+            <h1>World Wide Travel</h1>
+        </div>
+        <h2>Questionaire</h2>
+        <p class="intro-paragraph">Please fill in the following questionaire and World Wide Travel will organise a specifically tailored travel package just for you.</p>
+        <form method="POST" id="top" action="https://tau.usq.edu.au/courses/CSC2406/reflect.php">
+            <section>
+                <!-- Container for the dynamically generated help button, and the static content that is toggled when mousing over the help button. -->
+                <div id="helpBtnContainer">
+                    <div id="helpBtnContent" class="helpBtnDisplay hide">
+                        <h3>About You</h3>
+                        <h4>Click help button again to close.</h4>
+                        <h4>General</h4>
+                        <p>This section of the form asks you to fill out details relating to yourself and those close to you. The questions are fairly standard, such as first name, surname etc, with middle name being an optional field. The question relating to your interests is a multi select question. Therefore you can select more than one answer by ctl-clicking on each entry. Or you can just select one that best suits you, it is up to you.</p>
+                        <h4>Checkboxes</h4>
+                        <p>The checkboxes for whether you have a partner or children are optional, however should you check one of them further fields relating to the specifics of your partner/children will be made available to you to fill out.</p>
+                        <h4>Errors</h4>
+                        <p>ERRORS: Should you fill out a field with incorrect data, such as numbers in a text only field the form will not let you proceed to the next section until you have rectified these errors. Such errors will be visually represented via a red outline on the offending field, and associated error text will display near the field in question.</p>
+                    </div>
+                    <div id="helpBtnContent2" class="helpBtnDisplay hide">
+                        <h3>Contact Details</h3>
+                        <h4>Click help button again to close.</h4>
+                        <h4>General</h4>
+                        <p>This section of the form asks you to supply details regarding your contact information, such as your address, phone number and email. The suburb field is optional.</p>
+                        <h4>State</h4>
+                        <p>The state drop down list is primarily for Australian residents. Should you not reside in Australia, please choose the international option. Likewise, the postcode uses the Australian terminology, should your country use a different terminology for representing the area code in which you live, such as zipcode for America, use that in its place.</p>
+                        <h4>Errors</h4>
+                        <p>ERRORS: Should you fill out a field with incorrect data, such as numbers in a text only field the form will not let you proceed to the next section until you have rectified these errors. Such errors will be visually represented via a red outline on the offending field, and associated error text will display near the field in question.</p>
+                    </div>
+                    <div id="helpBtnContent3" class="helpBtnDisplay hide">
+                        <h3>Destination</h3>
+                        <h4>Click help button again to close.</h4>
+                        <h4>General</h4>
+                        <p>This section of the form asks you to fill out details relating to the preferred destination in which you would like to travel to. The questions relate to the overall environment, and region in which you would like to travel to, as well as what type of accomodation you would be looking at staying in. The question relating to how active you want to be on your trip is used to determine any extra activities that could be included in your package, once presented to you by World Wide Travel.</p>
+                        <h4>Drop Down Lists</h4>
+                        <p>The drop down lists contained in this section for chosen region and accomodation are dynamic in nature. This means they will first ask a more general question relating to their topic, then depending on your answer another drop down list will be generated asking you for a more specific answer. If nothing in the list satifies you, then by selecting "Other" in the accomodation field, a textbox will be provided for you to enter details describing the type of accomodation that you would like.</p>
+                        <h4>Errors</h4>
+                        <p>ERRORS: Should you fill out a field with incorrect data, such as numbers in a text only field the form will not let you proceed to the next section until you have rectified these errors. Such errors will be visually represented via a red outline on the offending field, and associated error text will display near the field in question.</p>
+                    </div>
+                    <div id="helpBtnContent4" class="helpBtnDisplay hide">
+                        <h3>Travel Specifics</h3>
+                        <h4>Click help button again to close.</h4>
+                        <h4>General</h4>
+                        <p>This final section of the form relates to travel specifics, asking questions such as preferred mode of travel, your budget, travel start and end dates, as well as how many poeple you expect to be travelling with. A textbox is provided for any extra comments you would like to add beofre finally submititng your form. Once you hit the submit button, the form data will be sent to World Wide Travel, and we will endevour to put together a custom travel package for you as soon as possible (generally 1-2 business days).</p>
+                        <h4>Drop Down Lists</h4>
+                        <p>The drop down lists contained in this section for mode of travel is dynamic in nature. It will first ask a more general question relating to the mode of travel you would prefer to undertake on you trip. Once you select from this list a further, more specific sub list will be generated for you to firther refine your choices.</p>
+                        <h4>Budget Range</h4>
+                        <p>The budget range is a slider representing your maximum travel budget. The slider can be dragged from left to right, with the far left value being $0, and the far right value being $50,000. The current value represented by the slider will be shown next to the label above the slider itself.</p>
+                        <h4>Errors</h4>
+                        <p>ERRORS: Should you fill out a field with incorrect data, such as numbers in a text only field the form will not let you proceed to the next section until you have rectified these errors. Such errors will be visually represented via a red outline on the offending field, and associated error text will display near the field in question.</p>
+                    </div>
+                </div>
+
+                <!-- Container for dynamically added form elements -->
+                <div id="questionaire1" class="questionaire"></div>
+
+                <!-- Button container and page not valid error message container -->
+                <div>
+                    <label id="sectionError" class="hide">Please fix the above fields before proceeding.</label>
+                </div>
+                <div id="bottomBtnContainer">
+                    <input type="button" id="beginButton" class="btn" value="Begin">
+                </div>
+            </section>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+            <img src="Images/logo_sm.png" alt="A vector image logo representing the earth" id="footer-logo">
+        <ul>
+            <li class="footer-item">&copy; 2017 World Wide Travel</li>
+            <li class="footer-item"><span class="footer-title">Phone: </span>(07) 1234 5678</li>
+            <li class="footer-item"><span class="footer-title">Email: </span>contact@worldwidetavel.com.au</li>
+        </ul>
+        <p class="reference">Header photo taken by Danilo Bueno courtesy of Pixabay.</p>
+        <p>Danilo Bueno 2017, Plane at night, Pixabay, viewed 24 September 2017, &lt;https://pixabay.com/en/night-flight-plane-airport-2307018/&gt;.</p>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
